@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&family=Kaisei+Opti:wght@400;500;700&display=swap');
+
+:root{
+  --bg-light: #DED5BD;
+  --text-light: #2D281C;
+  --primary-light: #007A7A;
+  --secondary-light: #7A7256;
+  --filter-light: #837656;
+}
+body{
+  background-color: var(--bg-light);
+}
+
+/* Typography and Iconography */
+h1{
+  font-family: "Kaisei HarunoUmi", sans-serif;
+  font-weight: bold;
+  font-size: 96px;
+  color: var(--text-light);
+}
+
+a .navItem{
+  font-family: "Kaisei Opti", sans-serif;
+  color: var(--primary-light);
+}
+
+p{
+  font-family: "Kaisei HarunoUmi", sans-serif;
+  font-weight: 500;
+}
+
+/* Animations for Text */
+
+
+/* Class Styles */
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--bg-light);
+  border: 1px solid red;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
