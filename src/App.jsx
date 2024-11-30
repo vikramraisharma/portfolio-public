@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import {Link} from "react-router-dom";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import NavBar from './components/NavBar.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,8 +12,9 @@ function App() {
     <>
       <div>
         <h1>vikram rai sharma</h1>
-        
       </div>
+      <NavBar/>
+
       <h2>Vite + React</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

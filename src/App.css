@@ -18,10 +18,10 @@ h1{
   font-size: 96px;
   color: var(--text-light);
 }
-
-a .navItem{
+.NavBarItem > a {
   font-family: "Kaisei Opti", sans-serif;
   color: var(--primary-light);
+  font-weight: bold;
 }
 
 p{
@@ -54,6 +54,28 @@ p{
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.NavBar{
+  display: flex;
+  flex-direction: row;
+  width: 50dvw;
+  justify-content: space-evenly;
+  margin: 10px auto;
+}
+
+.NavBarBreak{
+  display: flex;
+  height: 80%;
+  line-height: 100%;
+  align-self: center;
+  width: 1px;
+  background-color: var(--secondary-light);
+}
+
+.NavBarItem {
+  display: flex;
+  width: auto;
 }
 
 @keyframes logo-spin {

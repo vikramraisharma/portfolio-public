@@ -4,7 +4,6 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Root from "./routes/root.jsx"
 import Experience from "./routes/exp.jsx"
 import DevShowcase from './routes/devShowcase.jsx';
 import CreativeShowcase from "./routes/creativeShowcase.jsx"
