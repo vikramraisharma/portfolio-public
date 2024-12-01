@@ -42,7 +42,9 @@ p{
   text-align: center;
   background-color: var(--bg-light);
   width: 100dvw;
-  height: 100dvh;
+  height: 100%;
+  top: 0;
+  position: absolute;
 }
 
 .header-wrap {
@@ -73,13 +75,6 @@ p{
   text-align: left;
 }
 
-/* .header-before, .header-after {
-  text-overflow: hidden;
-  color: var(--secondary-light);
-  overflow: hidden;
-} */
-
-
 .NavBar{
   display: flex;
   flex-direction: row;
@@ -102,6 +97,8 @@ p{
   width: auto;
 }
 
+/* HOME */
+
 .photos{
   display: flex;
   width: 64dvw;
@@ -115,6 +112,48 @@ p{
   height: 18dvw;
   width: 18dvw;
   background-color: var(--filter-light);
+}
+
+/* CONTACT */
+
+.contact-main{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 64dvw;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.contact-text{
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding: 5px 0px;
+  width: 100%;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Kaisei HarunoUmi", sans-serif;
+}
+
+.contact-links{
+  display: flex;
+  width: 68dvw;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px auto;
+}
+
+.contact-links-item{
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.contact-links-item > a{
+  color: var(--primary-light);
+  margin-left: 5px;
 }
 
 @keyframes logo-spin {

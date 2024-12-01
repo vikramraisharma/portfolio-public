@@ -7,7 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Experience from "./routes/exp.jsx"
 import DevShowcase from './routes/devShowcase.jsx';
 import CreativeShowcase from "./routes/creativeShowcase.jsx"
-import Contact from './routes/contact.jsx';
+import Contact from './routes/Contact.jsx';
 
 const router = createBrowserRouter([
   {
