@@ -1,8 +1,15 @@
-export default function Contact() {
+import NavBar from "../components/navBar";
+import Header from "../components/Header";
+
+const Contact = () => {
    return (
      <>
-       <div>Contact</div>
+      <Header headerText={"getting personal"}/>
+      <NavBar activeLink="/contact"/>
+
      </>
    );
  }
+
+ export default Contact
  

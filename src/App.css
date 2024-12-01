@@ -16,17 +16,20 @@ h1{
   font-family: "Kaisei HarunoUmi", sans-serif;
   font-weight: bold;
   font-size: 96px;
+  line-height: 1.2;
   color: var(--text-light);
 }
 .NavBarItem > a {
   font-family: "Kaisei Opti", sans-serif;
   color: var(--primary-light);
   font-weight: bold;
+  font-size: 14pt;
 }
 
 p{
   font-family: "Kaisei HarunoUmi", sans-serif;
   font-weight: 500;
+  color: var(--text-light)
 }
 
 /* Animations for Text */
@@ -38,28 +41,49 @@ p{
   margin: 0 auto;
   text-align: center;
   background-color: var(--bg-light);
-  border: 1px solid red;
   width: 100dvw;
   height: 100dvh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  overflow: hidden;
+  gap: 15px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.header-before, .header-after {
+  flex: 1;
+  text-overflow: clip;
+  color: var(--secondary-light);
+  line-height: 1.2;
+  font-size: 96px; 
+  white-space: nowrap;
+  overflow: hidden;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.header-before {
+  text-align: right;
+  direction: rtl;
 }
+
+.header-after {
+  text-align: left;
+}
+
+/* .header-before, .header-after {
+  text-overflow: hidden;
+  color: var(--secondary-light);
+  overflow: hidden;
+} */
+
 
 .NavBar{
   display: flex;
   flex-direction: row;
-  width: 50dvw;
+  width: 60dvw;
   justify-content: space-evenly;
   margin: 10px auto;
 }
@@ -76,6 +100,21 @@ p{
 .NavBarItem {
   display: flex;
   width: auto;
+}
+
+.photos{
+  display: flex;
+  width: 64dvw;
+  justify-content: space-evenly;
+  height: fit-content;
+  margin: 30px auto;
+}
+
+.photo{
+  display: flex;
+  height: 18dvw;
+  width: 18dvw;
+  background-color: var(--filter-light);
 }
 
 @keyframes logo-spin {

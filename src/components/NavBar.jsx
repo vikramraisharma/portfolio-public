@@ -1,35 +1,36 @@
-import {useState} from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom';
 import "../App.css";
 
-const NavBar = () => {
+const NavBar = ({activeLink}) => {
+   console.log("active: " + activeLink)
+
+   const routerLinks = [
+      { path: "/", text: "home" },
+      { path: "/experience", text: "experience" },
+      { path: "/showcase/create", text: "creative showcase" },
+      { path: "/showcase/code", text: "dev showcase" },
+      { path: "/contact", text: "contact" },
+   ];
 
    return (
       <div className='NavBar'>
-         <div className='NavBarItem'>
-            <Link to="/">home</Link>
-         </div>
-         <div className='NavBarBreak'>
-            &nbsp;
-         </div>
-         <div className='NavBarItem'>
-            <Link to="/showcase/create">creative showcase</Link>
-         </div>
-         <div className='NavBarBreak'>
-            &nbsp;
-         </div>
-         <div className='NavBarItem'>
-            <Link to="/showcase/code">dev showcase</Link>
-         </div>
-         <div className='NavBarBreak'>
-            &nbsp;
-         </div>
-         <div className='NavBarItem'>
-            <Link to="/contact">contact</Link>
-         </div>
+         {routerLinks
+            .filter(link => link.path !== activeLink)
+            .map((link, index) => (
+               <React.Fragment key={link.path}>
+                  <div className='NavBarItem'>
+                     <Link to={link.path}>{link.text}</Link>
+                  </div>
+                  {index < routerLinks.length - 2 && (
+                     <div className='NavBarBreak'>
+                        &nbsp;
+                     </div>
+                  )}
+               </React.Fragment>
+         ))}
       </div>
    )
-
 }
 
-export default NavBar
+export default NavBar;
