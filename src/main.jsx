@@ -4,9 +4,9 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Experience from "./routes/exp.jsx"
-import DevShowcase from './routes/devShowcase.jsx';
-import CreativeShowcase from "./routes/creativeShowcase.jsx"
+import Experience from "./routes/Experience.jsx"
+import DevShowcase from './routes/DevShowcase.jsx';
+import CreativeShowcase from "./routes/CreativeShowcase.jsx"
 import Contact from './routes/Contact.jsx';
 
 const router = createBrowserRouter([
