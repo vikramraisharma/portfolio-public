@@ -7,7 +7,11 @@ const Contact = () => {
       <Header headerText={"getting personal"}/>
       <NavBar activeLink="/contact"/>
       <div className="contact-main">
-        <p className="contact-text">lorem ipsum</p>
+        <p className="contact-text">As a dynamic UI/UX designer and developer, I blend creative vision with business acumen to transform complex challenges into compelling digital experiences. Over seven years of expertise has taken me from founding a flourishing digital marketing agency to architecting sophisticated government applications. I excel at building lasting client relationships and delivering results – evidenced by scaling multiple small businesses and expertly navigating federal stakeholder requirements.
+          <br/>
+          <br/>
+          My mastery spans design systems and React development, but my true strength lies in driving business growth through thoughtful, user-centered design. I bring an entrepreneurial mindset to every project, whether I'm crafting high-fidelity prototypes, facilitating design sprints, or developing production applications with TypeScript and AWS. 
+        </p>
         <div className="photo">
           &nbsp;
         </div>
