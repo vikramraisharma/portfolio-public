@@ -91,6 +91,7 @@ p {
 .NavBarItem > a {
   font-family: "Kaisei Opti", sans-serif;
   color: var(--primary-light);
+  text-decoration: none;
   font-weight: bold;
   font-size: 14pt;
 }
@@ -365,11 +366,84 @@ p {
 }
 
 
-/* Utility classes */
-.card {
-  padding: 2em;
+
+.showcase-container {
+  position: relative;
+  z-index: 1;
 }
 
-.read-the-docs {
-  color: #888;
+.modal-overlay {
+  animation: fadeIn 0.3s;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.closing {
+  animation: fadeOut 0.3s;
+}
+
+.modal-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  animation: slideDown 0.3s;
+  z-index: 1001;
+  max-width: 90%;
+  width: 500px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+}
+
+.modal-card.closing {
+  animation: slideUp 0.3s;
+}
+
+.modal-card-head {
+  border-bottom: 1px solid #dbdbdb;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-card-foot {
+  border-top: 1px solid #dbdbdb;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50px); }
 }

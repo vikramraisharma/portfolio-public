@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import "../App.css";
 
 const NavBar = ({activeLink}) => {
-   console.log("active: " + activeLink)
-
    const routerLinks = [
       { path: "/", text: "home" },
       { path: "/experience", text: "experience" },
