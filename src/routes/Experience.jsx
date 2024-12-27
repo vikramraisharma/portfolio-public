@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from "../components/Header";
 import NavBar from "../components/navBar";
 import ExpBarChart from '../components/expChart';
-import "./routes.css"
+import "../App.css"
 export default function Experience() {
 
   const designData = [

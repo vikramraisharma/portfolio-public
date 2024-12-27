@@ -8,7 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer
 } from 'recharts';
-import './tooltip.css';
+import '../App.css';
 import { CustomTooltip } from './expToolTip';
 
 const ExpBarChart = ({ designData, codeData, bizData }) => {
@@ -29,13 +29,11 @@ const ExpBarChart = ({ designData, codeData, bizData }) => {
 
   const filteredData = getCurrentData();
 
-  // Calculate chart height based on number of items
-  // Each bar is 40px high with 20px padding between bars
   const chartHeight = useMemo(() => {
     if (!filteredData) return 500;
     const barHeight = 40;
     const barPadding = 20;
-    const totalPadding = 55; // Additional padding for chart margins
+    const totalPadding = 55;
     return (filteredData.length * (barHeight + barPadding)) + totalPadding;
   }, [filteredData]);
 
@@ -45,37 +43,43 @@ const ExpBarChart = ({ designData, codeData, bizData }) => {
 
   return (
     <div className="chart-container">
+      <div className="chart-nav">
+        <button
+          onClick={() => setActiveDataset('design')}
+          className={`nav-button ${activeDataset === 'design' ? 'active' : ''}`}
+          aria-label="Show design experience">Design</button>
+        <button
+          onClick={() => setActiveDataset('code')}
+          className={`nav-button ${activeDataset === 'code' ? 'active' : ''}`}
+          aria-label="Show coding experience">Software</button>
+        <button
+          onClick={() => setActiveDataset('business')}
+          className={`nav-button ${activeDataset === 'business' ? 'active' : ''}`}
+          aria-label="Show business experience">Business Development</button>
+      </div>
       <div className="chart-wrapper">
         <ResponsiveContainer width="100%" height={chartHeight}>
           <BarChart
             layout="vertical"
             data={filteredData}
             margin={{
-              top: 50,
-              right: 30,
-              left: 200,
-              bottom: 5
+              top: 20,
+              right: 50,
+              left: 50,  // Reduced from 200
+              bottom: 20
             }}
             barSize={40}
           >
             <CartesianGrid strokeDasharray="3 3" horizontal={false} />
-            {/* <XAxis
-              type="number"
-              domain={[0, 7]}
-              ticks={[1, 2, 3, 5, 7]}
-              orientation="top"
-              position="top"
-            /> */}
             <XAxis
               type="number"
               domain={[0, 7]}
-              ticks={[1, 2, 3, 5, 7]}
+              ticks={[1, 3, 5, 7]}
               orientation="top"
               position="top"
               tickFormatter={(value) => {
                 const labels = {
                   1: '1 year',
-                  2: '2 years',
                   3: '3 years',
                   5: '5 years',
                   7: '7 years'
@@ -88,12 +92,12 @@ const ExpBarChart = ({ designData, codeData, bizData }) => {
               dataKey="name"
               tick={{ 
                 fontSize: 14,
-                width: 180,
+                width: 120,  // Reduced from 180
                 textAnchor: 'end',
                 wordWrap: 'break-word'
               }}
               orientation="left"
-              width={190}
+              width={110}  // Reduced from 190
             />
             <Tooltip 
               cursor={{ fill: "var(--bg-light)" }}
@@ -106,24 +110,6 @@ const ExpBarChart = ({ designData, codeData, bizData }) => {
             />
           </BarChart>
         </ResponsiveContainer>
-      </div>
-
-      <div className="chart-nav">
-        <button
-          onClick={() => setActiveDataset('design')}
-          className={`nav-button ${activeDataset === 'design' ? 'active' : ''}`}
-          aria-label="Show design experience"
-        />
-        <button
-          onClick={() => setActiveDataset('code')}
-          className={`nav-button ${activeDataset === 'code' ? 'active' : ''}`}
-          aria-label="Show coding experience"
-        />
-        <button
-          onClick={() => setActiveDataset('business')}
-          className={`nav-button ${activeDataset === 'business' ? 'active' : ''}`}
-          aria-label="Show business experience"
-        />
       </div>
     </div>
   );
