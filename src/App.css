@@ -84,7 +84,7 @@ p {
   height: 2.5rem;
   line-height: 2.5rem;
   padding: 0.5rem 0.9rem;
-  border-radius: 2rem;
+  border-radius: 0.1rem;
   justify-content: center;
 }
 
@@ -109,7 +109,7 @@ p {
 }
 
 .activePage {
-  background-color: var(--filter-light);
+  background-color: var(--primary-light);
 }
 
 .activePage a {
@@ -265,21 +265,105 @@ p {
   margin-left: 5px;
 }
 
+/* .item-link{
+  text-decoration: none;
+  color: var(--primary-light);
+  font-family: "Kaisei Opti", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid red;
+  padding: 0.5rem
+}
+
+.item-link:hover{
+  color: white;
+  background-color: var(--primary-light);
+  transition: background-color 300ms linear;
+  transition: color 300ms linear;
+} */
+
+.item-link {
+  text-decoration: none;
+  color: var(--primary-light);
+  font-family: "Kaisei Opti", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  animation: colorChange 300ms linear;
+  border-radius: 0.1rem;
+}
+
+.item-link:hover {
+  animation: colorChangeHover 300ms linear forwards;
+}
+
+/* Showcase */
+.showcase-container{
+  height: fit-content;
+  width: 80dvw;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.showcase-card{
+  height: 550px;
+  width: 300px;
+  border-radius: 0.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sc-card-title{
+  max-height: 50px;
+  font-family: "Kaisei Opti", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+
+}
+
+.sc-card-image{
+  height: 400px;
+  width: 300px;
+  display: flex;
+  background-color: var(--secondary-light);
+}
+.sc-card-caption{
+  width: fit-content;
+  max-width: 300px;
+  height: 100px;
+  font-family: "Kaisei Opti";
+  font-size: 14px;
+  font-weight: 300;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Animations */
-@keyframes logo-spin {
+@keyframes colorChange {
   from {
-    transform: rotate(0deg);
+    color: white;
+    background-color: var(--primary-light);
   }
   to {
-    transform: rotate(360deg);
+    color: var(--primary-light);
+    background-color: transparent;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes colorChangeHover {
+  from {
+    color: var(--primary-light);
+    background-color: transparent;
+  }
+  to {
+    color: white;
+    background-color: var(--primary-light);
   }
 }
+
 
 /* Utility classes */
 .card {

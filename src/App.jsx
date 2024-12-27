@@ -18,6 +18,7 @@ function App() {
       </div>
       <div className='impact'>
         <p>crafting digital experiences, engaging clients, and driving business growth</p>
+        <a href='#' className='item-link'>download my resume</a>
       </div>
     </>
   )
