@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Header from "../components/Header";
-import NavBar from "../components/navBar";
+import NavBar from "../components/NavBar";
 import ExpBarChart from '../components/expChart';
 import "../App.css"
 export default function Experience() {
