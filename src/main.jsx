@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Experience from "/src/routes/Experience.jsx"
-import CodeShowcase from '/src/routes/DevShowcase.jsx';
-import CreativeShowcase from "/src/routes/CreativeShowcase.jsx"
-import Contact from '/src/routes/Contact.jsx';
+import Experience from "@/routes/Experience.jsx"
+import CodeShowcase from '@/routes/DevShowcase.jsx';
+import CreativeShowcase from "@/routes/CreativeShowcase.jsx"
+import Contact from '@/routes/Contact.jsx';
 
 const router = createBrowserRouter([
   {

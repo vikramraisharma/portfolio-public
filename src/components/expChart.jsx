@@ -9,7 +9,7 @@ import {
   ResponsiveContainer
 } from 'recharts';
 import '../App.css';
-import { CustomTooltip } from './expToolTip';
+import { CustomTooltip } from './expToolTip'; // This is correct if expToolTip is in the same components folder
 
 const ExpBarChart = ({ designData, codeData, bizData }) => {
   const [activeDataset, setActiveDataset] = useState('design');

@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from "../components/Header";
-import NavBar from "../components/navBar";
+import Header from "@/components/Header";
+import NavBar from "@/components/navBar";
 
 export default function CreativeShowcase() {
   const showcaseCards = [
