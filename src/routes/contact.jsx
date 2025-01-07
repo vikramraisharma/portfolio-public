@@ -1,6 +1,6 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../components/navBar";
 import Header from "../components/Header";
-//comment
+
 const Contact = () => {
   const resumeFile = "/Vikram_Sharma_Resume.docx"
    return (
