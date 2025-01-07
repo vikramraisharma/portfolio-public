@@ -23,10 +23,7 @@ body {
   width: 100dvw;
   height: fit-content;
   top: 0;
-<<<<<<< HEAD
-=======
   left: 0;
->>>>>>> c553838 (images gone)
   bottom: 0;
   position: absolute;
 }
@@ -129,11 +126,8 @@ p {
   align-items: flex-start;
   justify-content: space-between;
   margin: 0 auto;
-<<<<<<< HEAD
-=======
   padding: 20px;
   margin-top: 20px;
->>>>>>> c553838 (images gone)
 }
 
 .chart-wrapper {
@@ -227,8 +221,6 @@ p {
   height: 18dvw;
   width: 18dvw;
   background-color: var(--filter-light);
-<<<<<<< HEAD
-=======
   position: relative;
 
 }
@@ -243,7 +235,6 @@ p {
   height: 100%;
   background-color: rgba(131, 118, 86, 0.4); /* #837656 with 50% opacity */
   pointer-events: none;
->>>>>>> c553838 (images gone)
 }
 
 .impact > p {
@@ -325,49 +316,6 @@ p {
 }
 
 /* Showcase */
-<<<<<<< HEAD
-.showcase-container{
-  height: fit-content;
-  width: 80dvw;
-  margin: 40px auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.showcase-card{
-  height: 550px;
-  width: 300px;
-  border-radius: 0.1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.sc-card-title{
-  max-height: 50px;
-  font-family: "Kaisei Opti", sans-serif;
-  font-weight: 300;
-  font-size: 24px;
-
-}
-
-.sc-card-image{
-  height: 400px;
-  width: 300px;
-  display: flex;
-  background-color: var(--secondary-light);
-}
-.sc-card-caption{
-  width: fit-content;
-  max-width: 300px;
-  height: 100px;
-  font-family: "Kaisei Opti";
-  font-size: 14px;
-  font-weight: 300;
-  padding: 10px 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-=======
 .showcase-container {
   height: fit-content;
   width: 80dvw;
@@ -416,7 +364,6 @@ p {
   text-align: center;
   width: 100%;
   padding: 10px 5px;
->>>>>>> c553838 (images gone)
 }
 
 /* Animations */
@@ -523,8 +470,6 @@ p {
 @keyframes slideUp {
   from { transform: translateY(0); }
   to { transform: translateY(-50px); }
-<<<<<<< HEAD
-=======
 }
 
 /* Tablet Styles */
@@ -940,5 +885,4 @@ p {
   p, .contact-text{
     font-size: 0.8rem;
   }
->>>>>>> c553838 (images gone)
 }
